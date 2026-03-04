@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace MonkeyFinder.View;
 
-namespace MonkeyFinder.View
+public partial class MainPage : ContentPage
 {
-    internal class MainPage
+    public MainPage()
     {
+        InitializeComponent();
     }
 }

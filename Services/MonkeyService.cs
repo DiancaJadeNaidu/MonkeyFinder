@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MonkeyFinder.Services
 {
-    internal class MonkeyService
+    public class MonkeyService
     {
     }
 }
