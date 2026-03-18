@@ -19,7 +19,7 @@
                 <model:Monkey
                     Name="Red-shanked douc"
                     Image="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/douc.jpg"
-                    Location="Vietnam" />
+                    Location="Vietnam"/>
             </x:Array>
         </CollectionView.ItemsSource>
         <CollectionView.ItemTemplate>

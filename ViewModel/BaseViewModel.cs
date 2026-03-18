@@ -1,10 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace MonkeyFinder.ViewModel;
 
-namespace MonkeyFinder.ViewModel
+public partial class BaseViewModel : ObservableObject
 {
-    internal class BaseViewModel
+    private bool isBusy;
+    [NotifyPropertyChangedFor(nameof(IsNotBusy))]
+    public bool IsBusy
     {
+        get => isBusy;
+        set => SetProperty(ref isBusy, value);
     }
+
+    private string title;
+    public string Title
+    {
+        get => title;
+        set => SetProperty(ref title, value);
+    }
+
+    public bool IsNotBusy => !IsBusy;
 }

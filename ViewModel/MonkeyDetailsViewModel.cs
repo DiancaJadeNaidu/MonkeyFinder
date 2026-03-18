@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MonkeyFinder.ViewModel
 {
-    internal class MonkeyDetailsViewModel
+    public partial class MonkeyDetailsViewModel : BaseViewModel
     {
     }
 }
