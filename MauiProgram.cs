@@ -19,7 +19,10 @@ public static class MauiProgram
         builder.Logging.AddDebug();
 #endif
 
-
+        // Register app services, viewmodels and pages
+        builder.Services.AddSingleton<MonkeyFinder.Services.MonkeyService>(); // register your service
+        builder.Services.AddSingleton<MonkeyFinder.ViewModel.MonkeysViewModel>(); // register VM
+        builder.Services.AddTransient<MonkeyFinder.View.MainPage>(); // register page
 
         return builder.Build();
     }
