@@ -6,7 +6,7 @@
     xmlns:model="clr-namespace:MonkeyFinder.Model"
     xmlns:viewmodel="clr-namespace:MonkeyFinder.ViewModel"
     x:DataType="viewmodel:MonkeysViewModel"
-    Title="{Binding Title}">
+    Title="Monkeys">
     <Grid
         ColumnDefinitions="*,*"
         ColumnSpacing="5"
@@ -20,6 +20,11 @@
                 <DataTemplate x:DataType="model:Monkey">
                     <Grid Padding="10">
                         <Border HeightRequest="125" Style="{StaticResource CardView}">
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MonkeysViewModel}}, x:DataType=viewmodel:MonkeysViewModel, Path=GoToDetailsCommand}"
+                                        CommandParameter="{Binding .}"/>
+                            </Border.GestureRecognizers>
                             <Grid Padding="0" ColumnDefinitions="125,*">
                                 <Image Aspect="AspectFill" Source="{Binding Image}"
                                        WidthRequest="125"

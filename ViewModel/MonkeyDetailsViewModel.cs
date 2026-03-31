@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace MonkeyFinder.ViewModel;
 
-namespace MonkeyFinder.ViewModel
+[QueryProperty(nameof(Monkey), "Monkey")]
+public partial class MonkeyDetailsViewModel : BaseViewModel
 {
-    public partial class MonkeyDetailsViewModel : BaseViewModel
+    public MonkeyDetailsViewModel()
     {
     }
+
+    [ObservableProperty]
+   Monkey monkey;
 }

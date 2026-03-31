@@ -23,6 +23,8 @@ public static class MauiProgram
         builder.Services.AddSingleton<MonkeyFinder.Services.MonkeyService>(); // register your service
         builder.Services.AddSingleton<MonkeyFinder.ViewModel.MonkeysViewModel>(); // register VM
         builder.Services.AddTransient<MonkeyFinder.View.MainPage>(); // register page
+        builder.Services.AddTransient<MonkeyFinder.DetailsPage>(); 
+        builder.Services.AddTransient<MonkeyFinder.ViewModel.MonkeyDetailsViewModel>();
 
         return builder.Build();
     }
