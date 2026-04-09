@@ -20,6 +20,10 @@ public static class MauiProgram
 #endif
 
         // Register app services, viewmodels and pages
+        builder.Services.AddSingleton<IConnectivity>(Connectivity.Current);
+        builder.Services.AddSingleton<IGeolocation>(Geolocation.Default);
+        builder.Services.AddSingleton<IMap>(Map.Default);
+
         builder.Services.AddSingleton<MonkeyFinder.Services.MonkeyService>(); // register your service
         builder.Services.AddSingleton<MonkeyFinder.ViewModel.MonkeysViewModel>(); // register VM
         builder.Services.AddTransient<MonkeyFinder.View.MainPage>(); // register page
