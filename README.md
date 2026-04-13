@@ -14,8 +14,8 @@ Monkey Finder is a cross-platform mobile application built using .NET MAUI in Vi
 - Display detailed information
 - Geolocation support to find the closest monkey to you
 - Internet connectivity integration for fetching data
-- Cross-platform supper (Android, iOS, Windows
-- Clean and responsive user interface)
+- Cross-platform supper (Android, iOS, Windows)
+- Clean and responsive user interface
 
 ## Getting Started
 ### Prerequisites
